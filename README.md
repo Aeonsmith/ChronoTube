@@ -7,9 +7,11 @@
 
 The **ChronoTube Engine** is an interactive, spatial, and semantic simulation operating system for web archaeology, temporal graph querying, and counterfactual internet culture exploration across YouTube history (2005–2026+).
 
+---
+
 ## 🎯 Overview & Purpose
 
-The **ChronoTube Engine** is a digital preservation and temporal simulation platform that transforms historical internet archive snapshots into a continuous, interactive, and explorable universe. 
+The **ChronoTube Engine** transforms historical internet archive snapshots into a continuous, interactive, and explorable universe.
 
 Traditional archives like the Wayback Machine capture websites as disconnected, static HTML pages with frequent gaps (such as missing media or unindexed months in 2023). ChronoTube solves this by:
 1. **Bridging Archive Gaps**: Dynamically interpolating missing metrics (views, ratings, comments, and semantic embeddings) between recorded captures using domain-specific growth curves.
@@ -23,52 +25,52 @@ Traditional archives like the Wayback Machine capture websites as disconnected, 
 The ChronoTube Engine uses an event-sourced temporal property graph combined with interval-validity models and continuous numerical/categorical interpolation.
 
 ```
-+--------------------------------------------+
++-----------------------------------------------------------------------------------+
 |                                PRESENTATION LAYER                                 |
 |                                                                                   |
 |  [ 🪐 WebGL 3D Galaxy ]    [ 📜 Multi-Scale Scrubber ]   [ 🕸️ Force Graph View ]   |
 |  [ 📺 Retro UI Shells ]    [ ⚡ WASM Ruffle / Codecs ]    [ 🧪 Time Sandbox IDE ]   |
-+----------------------^---------------------+
++----------------------------------------^------------------------------------------+
                                          | JSON-RPC / GraphQL-Temporal
-+----------------------v---------------------+
++----------------------------------------v------------------------------------------+
 |                              CHRONOTUBE CORE ENGINE                               |
 |                                                                                   |
-|  +------------------+   +----------------------+ |
+|  +---------------------------------+   +----------------------------------------+ |
 |  |       Temporal State Router     |   |      Algorithmic Epoch Simulator       | |
 |  | - Snapshot delta interpolation  |   | - 2005–2009: 5-Star / Direct Views     | |
 |  | - Memento datetime resolver     |   | - 2010–2015: Watch-Time Accumulators   | |
 |  | - Dynamic skin & layout binding |   | - 2016–2021: Retention & Dislikes CTR  | |
-|  +----------^----------+   | - 2022–2026+: Neural Multimodal Vectors| |
-|                   |                    +----------^-----------+ |
-|  +----------v----------------------v-----------+ |
+|  +----------------^----------------+   | - 2022–2026+: Neural Multimodal Vectors| |
+|                   |                    +-------------------^--------------------+ |
+|  +----------------v----------------------------------------v--------------------+ |
 |  |                     Unified Temporal Execution Engine                        | |
 |  | - Traversal planning across time branches   - Spherical Vector Slerp Engine  | |
 |  | - Graph entity reconstruction               - Cross-Platform Identity Graph  | |
-|  +-------------------^----------------------+ |
-+----------------------+---------------------+
+|  +-------------------------------------^----------------------------------------+ |
++----------------------------------------+------------------------------------------+
                                          | Internal Storage Interface
-+----------------------v---------------------+
++----------------------------------------v------------------------------------------+
 |                               PERSISTENCE & GRAPH LAYER                           |
 |                                                                                   |
-|  +---------------+  +-------------+  +---------+ |
+|  +------------------------------+  +----------------------+  +------------------+ |
 |  |  Temporal Property Graph DB  |  | Vector Semantic DB   |  | Metadata Index   | |
 |  |  (Nodes/Edges with [t_s,t_e])|  | (HNSW 1536-dim per t)|  | (RocksDB / CDX)  | |
-|  +---------------+  +-------------+  +---------+ |
-+----------------------^---------------------+
+|  +------------------------------+  +----------------------+  +------------------+ |
++----------------------------------------^------------------------------------------+
                                          | Ingestion & Normalization Pipeline
-+----------------------v---------------------+
++----------------------------------------v------------------------------------------+
 |                              INGESTION & ARCHIVE LAYER                            |
 |                                                                                   |
 |  [ Wayback CDX API ]    [ TubeUp / IA S3 ]    [ Google+ WARC Dumps ]              |
 |  [ Filmot Subtitle DB ] [ Archivarix Echo ]   [ Live Snapshot Fallbacks ]         |
-+--------------------------------------------+
++-----------------------------------------------------------------------------------+
 ```
 
 ---
 
 ## 🧮 2. Interpolation Strategy Matrix
 
-When querying between discontinuous snapshots (such as archive gaps in 2023), the engine applies domain-specific mathematical functions:
+When querying between discontinuous snapshots, the engine applies domain-specific mathematical functions:
 
 | Strategy Name | Category | Mathematical Function | Best Use Case |
 | :--- | :--- | :--- | :--- |
@@ -85,36 +87,39 @@ When querying between discontinuous snapshots (such as archive gaps in 2023), th
 
 ---
 
-## 🚀 3. Installation & Quick Start
+## ⚙️ 3. Installation & Setup Instructions
 
-### Prerequisites
-* **Node.js**: `v18.0.0` or higher
+### 3.1 Prerequisites
+Ensure the following tools are installed on your system:
+* **Node.js**: `v18.0.0` or later (LTS recommended)
+* **Git**: `v2.30+`
 * **npm** or **pnpm**
 
+### 3.2 Installation Steps
+
 ```bash
-# 1. Clone repository
+# 1. Clone the repository
 git clone https://github.com/Aeonsmith/ChronoTube.git
 cd ChronoTube
 
-# 2. Install dependencies
+# 2. Install project dependencies
 npm install
 
-# 3. Seed historical metadata and archive indices
-npm run seed -- --sources=wayback,archive_team,filmot
-
-# 4. Start the interactive server & 3D Galaxy Engine
-npm run dev
+# 3. (Optional) Build TypeScript source to JavaScript
+npm run build
 ```
 
 ---
 
-## 💻 4. Usage Examples
+## 🚀 4. Usage Instructions & Examples
 
-### 4.1 Basic Point-in-Time Temporal Resolution
+### 4.1 Programmatic Point-in-Time Resolution (TypeScript / Node.js)
+
 ```typescript
 import { ChronoTubeResolutionEngine, TemporalSnapshot } from './temporal_resolution_engine';
 
-const videoTimeline: TemporalSnapshot[] = [
+// Define historical captures
+const snapshots: TemporalSnapshot[] = [
   {
     timestamp: '2006-04-23T20:30:00Z',
     properties: {
@@ -137,21 +142,22 @@ const videoTimeline: TemporalSnapshot[] = [
   }
 ];
 
-// Query exact state inside historical gap (June 2013)
-const state = ChronoTubeResolutionEngine.resolveStateAtTimestamp(
+// Resolve state during an unrecorded period (e.g. 2013-06-15)
+const resolvedState = ChronoTubeResolutionEngine.resolveStateAtTimestamp(
   'video:me_at_the_zoo',
-  videoTimeline,
+  snapshots,
   '2013-06-15T12:00:00Z'
 );
 
-console.log(state);
+console.log(resolvedState);
 ```
 
-### 4.2 Querying via ChronoCypher (GraphQL / Cypher)
+### 4.2 Querying via ChronoCypher
+
 ```cypher
-// Find all video responses to viral anchors in 2007
-MATCH (root:TemporalNode {id: "video:evolution_of_dance"})
-      <-[:VIDEO_RESPONSE_TO AT TIME "2007-06-15T12:00:00Z"]-(resp:TemporalNode)
+// Query viral video responses and recommendation links at a specific historical point
+MATCH (v:TemporalNode {id: "video:evolution_of_dance"})
+      <-[r:VIDEO_RESPONSE_TO AT TIME "2007-06-15T12:00:00Z"]-(resp:TemporalNode)
 RETURN resp.id, resp.properties.title, resp.properties.view_count
 ORDER BY resp.properties.view_count DESC
 LIMIT 10;
@@ -161,13 +167,14 @@ LIMIT 10;
 
 ## 🧪 5. Testing & Verification
 
-Run the built-in test suite covering all mathematical curves and gap resolution edge cases:
+Run the automated test suite covering all numerical curves, structural mergers, vector slerp normalization, and gap resolution edge cases:
 
 ```bash
+# Execute unit test suite
 npm test
 ```
 
 ---
 
 ## 📄 License
-MIT License. Created for digital preservation, web archaeology, and media research.
+Distributed under the **MIT License**. Created for digital preservation, web archaeology, and media research.
