@@ -163,6 +163,11 @@ ORDER BY resp.properties.view_count DESC
 LIMIT 10;
 ```
 
+## 🗺️ Project Roadmap
+
+To learn more about upcoming features, including our **3D Galaxy Spatial Explorer**, **Ruffle Flash WASM player**, and **Counterfactual Time Sandbox**, check out the complete [ChronoTube Project Roadmap (ROADMAP.md)](ROADMAP.md).
+
+---
 ---
 
 ## 🧪 5. Testing & Verification
