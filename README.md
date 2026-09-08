@@ -11,6 +11,30 @@ The **ChronoTube Engine** is an interactive, spatial, and semantic simulation op
 
 ---
 
+## ⚡ Quick Reference: Terminal Commands Guide
+
+When opening the **ChronoTube** desktop shortcut or launching the terminal in this directory, here are the primary commands you can run:
+
+| Command | Action | Description |
+| :--- | :--- | :--- |
+| `launch.bat` / Desktop Icon | **Launch Visual App** | Opens the interactive ChronoTube Time-Machine Desktop GUI application. |
+| `python app.py` | **Direct GUI Run** | Launches the CustomTkinter visual application with interactive time-scrubber and era simulator. |
+| `npm test` | **Run Test Suite** | Executes all 16 automated tests verifying mathematical curves (Linear, Logarithmic, Sigmoid S-Curve), categorical shifts, vector slerp normalization, and gap resolution. |
+| `node test/test_interpolation_engine.js` | **Direct Test Run** | Runs the unit test harness directly with Node.js without package manager wrappers. |
+| `node test/test_plugin_and_sandbox.js` | **Plugin & Sandbox Tests** | Verifies modular plugin hooks, custom shell rendering, and sandboxed simulation engine. |
+| `code .` | **Open in VS Code** | Launches Visual Studio Code with the full project tree open. |
+| `git status` | **Check Git Status** | Inspects current branch, modified files, and staging status. |
+| `git log --oneline -n 5` | **Recent History** | Displays the latest commits and releases. |
+| `ls` / `dir` | **List Files** | Lists all engines (`temporal_resolution_engine.ts`, `interpolation_engine.ts`), tests, and docs. |
+
+### Quick Smoke Test via Node.js
+To test the engine resolution headlessly from the command line:
+```bash
+node -e "const { ChronoTubeResolutionEngine } = require('./dist/temporal_resolution_engine.js'); console.log('✅ ChronoTube Engine is ready.');"
+```
+
+---
+
 ## 🎯 Overview & Purpose
 
 The **ChronoTube Engine** transforms historical internet archive snapshots into a continuous, interactive, and explorable universe.
@@ -165,19 +189,91 @@ ORDER BY resp.properties.view_count DESC
 LIMIT 10;
 ```
 
-## 🗺️ Project Roadmap
-
-To learn more about upcoming features, including our **3D Galaxy Spatial Explorer**, **Ruffle Flash WASM player**, and **Counterfactual Time Sandbox**, check out the complete [ChronoTube Project Roadmap (ROADMAP.md)](ROADMAP.md).
-
----
 ---
 
-## 🧪 5. Testing & Verification
+## 🧩 5. Modular Plugin Architecture (`plugin_system.ts`)
 
-Run the automated test suite covering all numerical curves, structural mergers, vector slerp normalization, and gap resolution edge cases:
+The ChronoTube OS provides an extensible lifecycle hook framework allowing researchers to mount custom UI reconstructors, algorithmic inspectors, and cross-platform timelines.
+
+### 5.1 Plugin Lifecycle Interface
+```typescript
+export interface ChronoTubePlugin {
+  readonly id: string;
+  readonly name: string;
+  readonly version: string;
+  readonly category: 'UI_RECONSTRUCTION' | 'ALGORITHM_ANALYSIS' | 'PROVENANCE_INTEGRITY' | 'CROSS_PLATFORM_GRAPH';
+  
+  initialize?(context: PluginContext): Promise<void> | void;
+  onEpochChange?(newEpoch: AlgorithmicEpochConfig, timestamp: string): void;
+  onStateResolve?<T>(resolvedState: ResolvedTemporalState<T>): ResolvedTemporalState<T> | void;
+  renderCustomShell?(resolvedState: ResolvedTemporalState<any>, timestamp: string): ReconstructedShellView | null;
+  verifyProvenance?(entityId: string, timestamp: string): ProvenanceAuditRecord | null;
+}
+```
+
+### 5.2 How to Author a Custom Plugin
+```typescript
+import { ChronoTubePlugin, ReconstructedShellView, ChronoTubePluginRegistry } from './plugin_system';
+import { ResolvedTemporalState } from './temporal_resolution_engine';
+
+export class Custom2008AnnotationsPlugin implements ChronoTubePlugin {
+  public readonly id = 'plugin.custom.2008-annotations';
+  public readonly name = '2008 Interactive Annotations Overlay';
+  public readonly version = '1.0.0';
+  public readonly category = 'UI_RECONSTRUCTION';
+
+  public renderCustomShell(state: ResolvedTemporalState<any>, timestamp: string): ReconstructedShellView | null {
+    const year = new Date(timestamp).getUTCFullYear();
+    if (year !== 2008) return null;
+
+    return {
+      eraName: '2008 Annotations & Speech Bubble Era',
+      playerType: 'FLASH_FLV',
+      resolution: '480x360',
+      bitrateKbps: 450,
+      ratingSystem: '5_STAR_DISCRETE',
+      uiTheme: {
+        primaryBg: '#FFFFFF',
+        accentColor: '#CC181E',
+        subscribeStyle: 'YELLOW_BUTTON'
+      },
+      sidebarModules: ['Interactive Note Bubbles', 'Spotlight Annotations', 'Video Responses']
+    };
+  }
+}
+
+// Registering the plugin:
+const registry = new ChronoTubePluginRegistry();
+registry.register(new Custom2008AnnotationsPlugin());
+```
+
+### 5.3 Mounted Built-in Plugins
+1. **`plugin.reconstruct.2006-homepage`**: Reconstructs the 2006 Flash 8 layout, yellow subscribe buttons, and featured video carousels.
+2. **`plugin.reconstruct.2010-cosmic`**: Reconstitutes the Cosmic Panda dark player frame, watch-time recommendation cards, and Google+ discussion threads.
+3. **`plugin.algo.shift-explorer`**: Injects era-specific algorithm regime metadata (Keyword ➔ Watch Time ➔ Retention CTR ➔ 1536-dim HNSW).
+4. **`plugin.timeline.vine-tiktok-bridge`**: Connects video responses with Vine loops and modern vertical Shorts shelves.
+5. **`plugin.provenance.wayback-verifier`**: Verifies Memento and Wayback Machine CDX cryptographic hashes.
+
+---
+
+## 🧪 6. Sandboxed Playback & Counterfactual Publishing (`sandboxed_playback_engine.ts`)
+
+Allows historians to run **in-situ simulations** and test hypothetical "What-If" publishing experiments under historical platform constraints.
+
+* **Strict Provenance Watermarking**: All counterfactual artifacts carry an immutable `✦ SYNTHETIC SIMULATION ARTIFACT // PROVENANCE: EXP-SIM-YYYY-XXXXXXXX // NOT A HISTORICAL CANONICAL CAPTURE ✦` header.
+* **Virtualized Codec Emulation**:
+  * *2005–2009*: Sorenson Spark FLV (320x240 @ 15fps, 300kbps) with 3.5 Mbps DSL buffering latency (3,800ms stall).
+  * *2010–2015*: H.264 / AVC 720p/1080p HTML5 with watch-time accumulation modeling.
+  * *2022–2026+*: AV1 4K 60fps HDR spatial audio with 1536-dim HNSW neural vector clustering.
+
+---
+
+## 🧪 7. Testing & Verification
+
+Run the full 23-suite automated test matrix covering numerical curves, structural mergers, vector slerp normalization, plugin lifecycle hooks, and sandboxed simulation:
 
 ```bash
-# Execute unit test suite
+# Execute full test suite
 npm test
 ```
 
