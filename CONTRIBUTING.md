@@ -1,4 +1,4 @@
-﻿# 🤝 Contributing to ChronoTube Engine
+# 🤝 Contributing to ChronoTube Engine
 
 Thank you for your interest in contributing to the **ChronoTube Engine**! Whether you are helping to improve our temporal interpolation algorithms, adding new era definitions, or fixing bugs in our archive ingestion pipelines, your contributions are welcome.
 

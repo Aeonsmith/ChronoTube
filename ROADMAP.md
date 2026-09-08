@@ -1,4 +1,4 @@
-﻿# 🗺️ ChronoTube Engine: Project Roadmap
+# 🗺️ ChronoTube Engine: Project Roadmap
 
 This document outlines the strategic vision, milestones, and future feature developments for the **ChronoTube Engine**.
 

@@ -1,4 +1,4 @@
-﻿# 🪐 Reconstructing Lost Internet History: Introducing the ChronoTube Temporal Graph Engine
+# 🪐 Reconstructing Lost Internet History: Introducing the ChronoTube Temporal Graph Engine
 
 ## 🏛️ The Challenge: The Illusion of Complete Web Archives
 When archiving platforms crawl dynamic platforms like YouTube:
