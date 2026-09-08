@@ -16,52 +16,52 @@ Traditional archives like the Wayback Machine capture websites as disconnected, 
 2. **Reconstructing Historic Ecosystems**: Restoring era-accurate interfaces, recommendation algorithms, and social response graphs (from early 2006 Flash 5-star ratings to modern 2026 neural vector feeds).
 3. **Powering In-Situ & Counterfactual Exploration**: Allowing digital historians and creators to scrub through time, explore cultural topologies in a 3D galaxy view, or simulate how content would propagate if uploaded in a past era.
 
-------
+---
 
 ## 🏛️ 1. System Architecture
 
 The ChronoTube Engine uses an event-sourced temporal property graph combined with interval-validity models and continuous numerical/categorical interpolation.
 
 ```
-+-----------------------------------------------------------------------------------+
++--------------------------------------------+
 |                                PRESENTATION LAYER                                 |
 |                                                                                   |
 |  [ 🪐 WebGL 3D Galaxy ]    [ 📜 Multi-Scale Scrubber ]   [ 🕸️ Force Graph View ]   |
 |  [ 📺 Retro UI Shells ]    [ ⚡ WASM Ruffle / Codecs ]    [ 🧪 Time Sandbox IDE ]   |
-+----------------------------------------^------------------------------------------+
++----------------------^---------------------+
                                          | JSON-RPC / GraphQL-Temporal
-+----------------------------------------v------------------------------------------+
++----------------------v---------------------+
 |                              CHRONOTUBE CORE ENGINE                               |
 |                                                                                   |
-|  +---------------------------------+   +----------------------------------------+ |
+|  +------------------+   +----------------------+ |
 |  |       Temporal State Router     |   |      Algorithmic Epoch Simulator       | |
 |  | - Snapshot delta interpolation  |   | - 2005–2009: 5-Star / Direct Views     | |
 |  | - Memento datetime resolver     |   | - 2010–2015: Watch-Time Accumulators   | |
 |  | - Dynamic skin & layout binding |   | - 2016–2021: Retention & Dislikes CTR  | |
-|  +----------------^----------------+   | - 2022–2026+: Neural Multimodal Vectors| |
-|                   |                    +-------------------^--------------------+ |
-|  +----------------v----------------------------------------v--------------------+ |
+|  +----------^----------+   | - 2022–2026+: Neural Multimodal Vectors| |
+|                   |                    +----------^-----------+ |
+|  +----------v----------------------v-----------+ |
 |  |                     Unified Temporal Execution Engine                        | |
 |  | - Traversal planning across time branches   - Spherical Vector Slerp Engine  | |
 |  | - Graph entity reconstruction               - Cross-Platform Identity Graph  | |
-|  +-------------------------------------^----------------------------------------+ |
-+----------------------------------------+------------------------------------------+
+|  +-------------------^----------------------+ |
++----------------------+---------------------+
                                          | Internal Storage Interface
-+----------------------------------------v------------------------------------------+
++----------------------v---------------------+
 |                               PERSISTENCE & GRAPH LAYER                           |
 |                                                                                   |
-|  +------------------------------+  +----------------------+  +------------------+ |
+|  +---------------+  +-------------+  +---------+ |
 |  |  Temporal Property Graph DB  |  | Vector Semantic DB   |  | Metadata Index   | |
 |  |  (Nodes/Edges with [t_s,t_e])|  | (HNSW 1536-dim per t)|  | (RocksDB / CDX)  | |
-|  +------------------------------+  +----------------------+  +------------------+ |
-+----------------------------------------^------------------------------------------+
+|  +---------------+  +-------------+  +---------+ |
++----------------------^---------------------+
                                          | Ingestion & Normalization Pipeline
-+----------------------------------------v------------------------------------------+
++----------------------v---------------------+
 |                              INGESTION & ARCHIVE LAYER                            |
 |                                                                                   |
 |  [ Wayback CDX API ]    [ TubeUp / IA S3 ]    [ Google+ WARC Dumps ]              |
 |  [ Filmot Subtitle DB ] [ Archivarix Echo ]   [ Live Snapshot Fallbacks ]         |
-+-----------------------------------------------------------------------------------+
++--------------------------------------------+
 ```
 
 ---
