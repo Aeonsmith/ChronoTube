@@ -179,6 +179,11 @@ Run the automated test suite covering all numerical curves, structural mergers, 
 npm test
 ```
 
+## 🤝 Contributing
+
+We welcome contributions from developers, mathematicians, data archivists, and internet historians! Please review our [Contribution Guidelines (CONTRIBUTING.md)](CONTRIBUTING.md) to learn about our development workflow, coding standards, and pull request process.
+
+---
 ---
 
 ## 📄 License
