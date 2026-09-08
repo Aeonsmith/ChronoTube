@@ -7,7 +7,16 @@
 
 The **ChronoTube Engine** is an interactive, spatial, and semantic simulation operating system for web archaeology, temporal graph querying, and counterfactual internet culture exploration across YouTube history (2005–2026+).
 
----
+## 🎯 Overview & Purpose
+
+The **ChronoTube Engine** is a digital preservation and temporal simulation platform that transforms historical internet archive snapshots into a continuous, interactive, and explorable universe. 
+
+Traditional archives like the Wayback Machine capture websites as disconnected, static HTML pages with frequent gaps (such as missing media or unindexed months in 2023). ChronoTube solves this by:
+1. **Bridging Archive Gaps**: Dynamically interpolating missing metrics (views, ratings, comments, and semantic embeddings) between recorded captures using domain-specific growth curves.
+2. **Reconstructing Historic Ecosystems**: Restoring era-accurate interfaces, recommendation algorithms, and social response graphs (from early 2006 Flash 5-star ratings to modern 2026 neural vector feeds).
+3. **Powering In-Situ & Counterfactual Exploration**: Allowing digital historians and creators to scrub through time, explore cultural topologies in a 3D galaxy view, or simulate how content would propagate if uploaded in a past era.
+
+------
 
 ## 🏛️ 1. System Architecture
 
