@@ -4,9 +4,10 @@
     "description":  "Multi-Dimensional YouTube Time-Machine \u0026 Digital Archaeology OS",
     "main":  "dist/temporal_resolution_engine.js",
     "scripts": {
-        "test": "node test/test_interpolation_engine.js && node test/test_plugin_and_sandbox_exhaustive.js",
+        "test": "node test/test_interpolation_engine.js && node test/test_plugin_and_sandbox_exhaustive.js && node test/test_sample_2010_plugin.js",
         "test:interpolation": "node test/test_interpolation_engine.js",
-        "test:plugins": "node test/test_plugin_and_sandbox_exhaustive.js"
+        "test:plugins": "node test/test_plugin_and_sandbox_exhaustive.js",
+        "test:sample2010": "node test/test_sample_2010_plugin.js"
     },
     "keywords":  [
                      "archaeology",
