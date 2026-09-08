@@ -1,12 +1,17 @@
-{
-  "name": "chronotube-engine",
-  "version": "1.0.0",
-  "description": "Multi-Dimensional YouTube Time-Machine & Digital Archaeology OS",
-  "main": "dist/temporal_resolution_engine.js",
-  "scripts": {
-    "test": "node test/test_interpolation_engine.js"
-  },
-  "keywords": ["archaeology", "temporal-graph", "interpolation", "web-archive"],
-  "author": "ChronoTube Team",
-  "license": "MIT"
+﻿{
+    "name":  "chronotube-engine",
+    "version":  "1.1.0",
+    "description":  "Multi-Dimensional YouTube Time-Machine \u0026 Digital Archaeology OS",
+    "main":  "dist/temporal_resolution_engine.js",
+    "scripts":  {
+                    "test":  "node test/test_interpolation_engine.js"
+                },
+    "keywords":  [
+                     "archaeology",
+                     "temporal-graph",
+                     "interpolation",
+                     "web-archive"
+                 ],
+    "author":  "ChronoTube Team",
+    "license":  "MIT"
 }
