@@ -1,7 +1,9 @@
 ﻿# 🪐 ChronoTube Engine: Multi-Dimensional YouTube Time-Machine & Digital Archaeology OS
 
 [![ChronoTube Engine CI](https://github.com/Aeonsmith/ChronoTube/actions/workflows/ci.yml/badge.svg)](https://github.com/Aeonsmith/ChronoTube/actions/workflows/ci.yml)
+[![GitHub Release](https://img.shields.io/github/v/release/Aeonsmith/ChronoTube?color=blue&label=Release)](https://github.com/Aeonsmith/ChronoTube/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests: 16 Passing](https://img.shields.io/badge/Tests-16%20Passing-success.svg)](TEST_RESULTS.md)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 
