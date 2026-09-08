@@ -1,63 +1,63 @@
-# ðŸª ChronoTube Engine: Multi-Dimensional YouTube Time-Machine & Digital Archaeology OS
+﻿# 🪐 ChronoTube Engine: Multi-Dimensional YouTube Time-Machine & Digital Archaeology OS
 
 [![ChronoTube Engine CI](https://github.com/Aeonsmith/ChronoTube/actions/workflows/ci.yml/badge.svg)](https://github.com/Aeonsmith/ChronoTube/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
 
-The **ChronoTube Engine** is an interactive, spatial, and semantic simulation operating system for web archaeology, temporal graph querying, and counterfactual internet culture exploration across YouTube history (2005â€“2026+).
+The **ChronoTube Engine** is an interactive, spatial, and semantic simulation operating system for web archaeology, temporal graph querying, and counterfactual internet culture exploration across YouTube history (2005–2026+).
 
 ---
 
-## ðŸ›ï¸ 1. System Architecture
+## 🏛️ 1. System Architecture
 
 The ChronoTube Engine uses an event-sourced temporal property graph combined with interval-validity models and continuous numerical/categorical interpolation.
 
 ```
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
++-----------------------------------------------------------------------------------+
 |                                PRESENTATION LAYER                                 |
 |                                                                                   |
-|  [ ðŸª WebGL 3D Galaxy ]    [ ðŸ“œ Multi-Scale Scrubber ]   [ ðŸ•¸ï¸ Force Graph View ]   |
-|  [ ðŸ“º Retro UI Shells ]    [ âš¡ WASM Ruffle / Codecs ]    [ ðŸ§ª Time Sandbox IDE ]   |
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–²â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
-                                         â”‚ JSON-RPC / GraphQL-Temporal
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
+|  [ 🪐 WebGL 3D Galaxy ]    [ 📜 Multi-Scale Scrubber ]   [ 🕸️ Force Graph View ]   |
+|  [ 📺 Retro UI Shells ]    [ ⚡ WASM Ruffle / Codecs ]    [ 🧪 Time Sandbox IDE ]   |
++----------------------------------------^------------------------------------------+
+                                         | JSON-RPC / GraphQL-Temporal
++----------------------------------------v------------------------------------------+
 |                              CHRONOTUBE CORE ENGINE                               |
 |                                                                                   |
-|  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” |
+|  +---------------------------------+   +----------------------------------------+ |
 |  |       Temporal State Router     |   |      Algorithmic Epoch Simulator       | |
-|  | - Snapshot delta interpolation  |   | - 2005â€“2009: 5-Star / Direct Views     | |
-|  | - Memento datetime resolver     |   | - 2010â€“2015: Watch-Time Accumulators   | |
-|  | - Dynamic skin & layout binding |   | - 2016â€“2021: Retention & Dislikes CTR  | |
-|  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–²â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   | - 2022â€“2026+: Neural Multimodal Vectors| |
-|                   â”‚                    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–²â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ |
-|  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” |
+|  | - Snapshot delta interpolation  |   | - 2005–2009: 5-Star / Direct Views     | |
+|  | - Memento datetime resolver     |   | - 2010–2015: Watch-Time Accumulators   | |
+|  | - Dynamic skin & layout binding |   | - 2016–2021: Retention & Dislikes CTR  | |
+|  +----------------^----------------+   | - 2022–2026+: Neural Multimodal Vectors| |
+|                   |                    +-------------------^--------------------+ |
+|  +----------------v----------------------------------------v--------------------+ |
 |  |                     Unified Temporal Execution Engine                        | |
 |  | - Traversal planning across time branches   - Spherical Vector Slerp Engine  | |
 |  | - Graph entity reconstruction               - Cross-Platform Identity Graph  | |
-|  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–²â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ |
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
-                                         â”‚ Internal Storage Interface
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
+|  +-------------------------------------^----------------------------------------+ |
++----------------------------------------+------------------------------------------+
+                                         | Internal Storage Interface
++----------------------------------------v------------------------------------------+
 |                               PERSISTENCE & GRAPH LAYER                           |
 |                                                                                   |
-|  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” |
+|  +------------------------------+  +----------------------+  +------------------+ |
 |  |  Temporal Property Graph DB  |  | Vector Semantic DB   |  | Metadata Index   | |
 |  |  (Nodes/Edges with [t_s,t_e])|  | (HNSW 1536-dim per t)|  | (RocksDB / CDX)  | |
-|  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ |
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–²â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
-                                         â”‚ Ingestion & Normalization Pipeline
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
+|  +------------------------------+  +----------------------+  +------------------+ |
++----------------------------------------^------------------------------------------+
+                                         | Ingestion & Normalization Pipeline
++----------------------------------------v------------------------------------------+
 |                              INGESTION & ARCHIVE LAYER                            |
 |                                                                                   |
 |  [ Wayback CDX API ]    [ TubeUp / IA S3 ]    [ Google+ WARC Dumps ]              |
 |  [ Filmot Subtitle DB ] [ Archivarix Echo ]   [ Live Snapshot Fallbacks ]         |
-+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€+
++-----------------------------------------------------------------------------------+
 ```
 
 ---
 
-## ðŸ§® 2. Interpolation Strategy Matrix
+## 🧮 2. Interpolation Strategy Matrix
 
 When querying between discontinuous snapshots (such as archive gaps in 2023), the engine applies domain-specific mathematical functions:
 
@@ -76,7 +76,7 @@ When querying between discontinuous snapshots (such as archive gaps in 2023), th
 
 ---
 
-## ðŸš€ 3. Installation & Quick Start
+## 🚀 3. Installation & Quick Start
 
 ### Prerequisites
 * **Node.js**: `v18.0.0` or higher
@@ -84,8 +84,8 @@ When querying between discontinuous snapshots (such as archive gaps in 2023), th
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/chronotube/engine.git
-cd engine
+git clone https://github.com/Aeonsmith/ChronoTube.git
+cd ChronoTube
 
 # 2. Install dependencies
 npm install
@@ -99,7 +99,7 @@ npm run dev
 
 ---
 
-## ðŸ’» 4. Usage Examples
+## 💻 4. Usage Examples
 
 ### 4.1 Basic Point-in-Time Temporal Resolution
 ```typescript
@@ -150,7 +150,7 @@ LIMIT 10;
 
 ---
 
-## ðŸ§ª 5. Testing & Verification
+## 🧪 5. Testing & Verification
 
 Run the built-in test suite covering all mathematical curves and gap resolution edge cases:
 
@@ -160,5 +160,5 @@ npm test
 
 ---
 
-## ðŸ“„ License
+## 📄 License
 MIT License. Created for digital preservation, web archaeology, and media research.
